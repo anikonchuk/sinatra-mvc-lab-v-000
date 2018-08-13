@@ -9,7 +9,7 @@ class PigLatinizer
     if vowel?(word[0])
       word = word + "way"
     #first three letters are consonants
-  elsif !vowel?(word[0]) && !vowel?(word[1]) && !vowel?(word[2])
+    elsif !vowel?(word[0]) && !vowel?(word[1]) && !vowel?(word[2])
       word = word[3..-1] + word[0..2] + "ay"
     #first two letters are consonants
     elsif !vowel?(word[0]) && !vowel?(word[1])
