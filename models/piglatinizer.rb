@@ -1,3 +1,4 @@
+require 'pry'
 class PigLatinizer
 
   def vowel?(letter)
@@ -10,6 +11,8 @@ class PigLatinizer
       word = word + "way"
     #first three letters are consonants
     elsif !vowel?(word[0]) && !vowel?(word[1]) && !vowel?(word[2])
+
+      binding.pry
       word = word[3..-1] + word[0..2] + "ay"
     #first two letters are consonants
     elsif !vowel?(word[0]) && !vowel?(word[1])
